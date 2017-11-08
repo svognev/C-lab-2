@@ -1,0 +1,71 @@
+Task1 - высотометр
+
+main1
+
+0. Хедеры + define NOWARNINGS + time.h
+1. Переменная startHeight
+2. Запрашиваем высоту startHeight у пользователя, пишем в startHeight.
+3. Цикл (while startHeight > 0)
+	- выводит startHeight
+	- вызывает height(currTime, startHeight)
+4. printf("BABAH!!!)
+5. return 0
+
+task1
+
+0. хедеры + define
+1. startHeight = startHeight - (9.81 * (currTime * currTime) / 2)
+2. Возвращаем startHeight.
+
+
+=======================================
+
+Task 2 - угадай число
+
+main2
+
+0. хедеры
+1. Переменные value И secret
+2. генеруируем число от 1 до 100, пишем в secret
+3. while(1)
+	- Приглашаем пользователя ввести число, записываем в value
+	- если turn(value, secret) == 0, 
+		- пишем "угадал"
+		- завершаем программу
+	- если turn > 0,
+	    - пишем "меньше"
+	- если turn < 0 
+		- пишем "больше"
+		
+task2
+
+0. если (value == secret) - возвращаем 0
+1. если (value < secret) - возвращаем -1
+2. если (value > secret) - возвращаем 1
+
+
+========================================
+
+Task 3 - треугольник из звёздочек
+
+main3
+
+0. хедеры
+1. переменная для хранения количество строк звёздочек "lines", переменная "buf[80]"
+2. цикл for (line = 1; i <= lines; i++)
+	- printf(buf, line)
+3. return 0
+
+task3
+
+0. Цикл (int i = 0, i < 80, i ++)
+	- если (i < (39 - (line + line - 1) / 2) || (i > 39 + (line + line - 1) /2 )
+		buff[i] = ' ';
+	- в остальных случаях 
+		buff[i] = '*';
+1. возвращаем buff;
+
+=========================================
+Task 4
+
+
