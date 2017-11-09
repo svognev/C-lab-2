@@ -66,7 +66,7 @@ task3
 1. возвращаем buff;
 
 =========================================
-Task 4
+Task 4 - сортировка в массиве: сначала буквы, потом цифры
 
 main4
 
@@ -93,7 +93,7 @@ char buff;
 	
 =========================================
 	
-Task 5
+Task 5 - генератор паролей
 
 main5
 
@@ -104,3 +104,74 @@ main5
 
 task5
 https://stackoverflow.com/questions/30486336/random-password-generator-same-string
+
+
+=========================================
+
+Task6 - удаление лишних пробелов
+
+main6
+
+0. хедеры
+1. переменная массив char line[256] = {0};
+2. Предлагаем ввести строку, записываем в Line
+3. Выводим введённую пользователем строку line
+4. Выводим результат clear(line)
+5. Завершаем программу
+
+task6
+
+0. Хедеры
+1. Функция (moveArray(int i, int j) передвижения всех последующих символов на позицию после текущего эелемента
+	цикл перемещения: while (j < strlen(line))
+		line[i] == line[j]
+		i++
+		j++
+2. цикл проверки символа - равен ли ' ': for (i = 0; i < strlen(line); i++)
+	если line[i] == ' '
+		цикл поиска следующего символа != ' ': for (j = i+1; j < strlen(line; j++)
+			если line[j] != ' '
+				moveArray(i+1, j)
+	если (line[i] == ' ' && i == 0)
+		moveArray(i, i+1)
+	если (line[i] == ' ' && line[i+1] == '\0')
+		line[i] = '\0';
+4. return line;
+
+==========================================
+	
+Task 7 - таблица встречаемости символов
+
+main7
+	
+0. хедеры
+1. переменная line[512] = {0}, result[2][256] = {0}
+2. Просим ввести строку
+3. Записываем строку в line.
+4. Цикл проверки каждого символа
+	for (i = 0; i < strlen(line); i++)
+		int count = 1;
+		char currentChar = line[i];
+		int k = i+1;
+		while (k < strlen(line))
+			line[i] = line[k]
+			
+		
+		for (j = i+1; j < strlen(line); j++)
+			if currentChar == line[j]
+				count++;
+				while (j < strlen(line))
+					line[i] == line[j]
+					i++
+					j++
+				
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
