@@ -68,4 +68,39 @@ task3
 =========================================
 Task 4
 
+main4
 
+0. хедеры
+1. переменная char line[64]
+2. генерируем хеш, записываем в line
+3. Выводим получившийся хеш.
+4. Выводим process(line)
+5. завершаем программу
+
+task4
+
+char buff;
+
+0. цикл (int i = 0; i < strlen(line) / 2; i++)
+	если (line[i] == [A-z])
+		цикл (int j = strlen(line); int > strlen(line) /2; i--)
+			если line[j] == [0-9]
+				buff = line[j];
+				line[j] = line[i];
+				line[i] = buff;
+				break;
+1. Вернуть line;
+	
+=========================================
+	
+Task 5
+
+main5
+
+0. хедеры
+1. перменная char line[8]
+2. цикл от 0 до 10;
+	вызываем password(line);
+
+task5
+https://stackoverflow.com/questions/30486336/random-password-generator-same-string
