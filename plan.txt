@@ -145,26 +145,23 @@ Task 7 - таблица встречаемости символов
 main7
 	
 0. хедеры
-1. переменная line[512] = {0}, result[2][256] = {0}
+1. переменная char line[512] = {0}, int resultCounters = {0}; char resultSymbols[256] = {'0'};
 2. Просим ввести строку
 3. Записываем строку в line.
-4. Цикл проверки каждого символа
+4. Цикл заполнения resultSymbols всеми символами: for (i = 0; i < strlen(resultSymbols); i++) 
+	int k = -128;
+	resultSymbols[i] = [k]
+	k++;
+5. Цикл проверки каждого символа
 	for (i = 0; i < strlen(line); i++)
-		int count = 1;
-		char currentChar = line[i];
-		int k = i+1;
-		while (k < strlen(line))
-			line[i] = line[k]
-			
-		
-		for (j = i+1; j < strlen(line); j++)
-			if currentChar == line[j]
-				count++;
-				while (j < strlen(line))
-					line[i] == line[j]
-					i++
-					j++
-				
+		for (j = 0; j < strlen(resultSybmols); j++)
+			if (line[i] == resultSymbols[j])
+					resultCounters[j]++;
+6. Цикл вывода таблицы: for (n = 0; n < strlen(resultCounters); n++)
+							printf("'%c' symbol encountered %d times\n", resultSymbold[n], resultCounters[n]);
+7. Return 0;
+					
+							
 	
 	
 	
