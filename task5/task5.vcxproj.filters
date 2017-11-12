@@ -15,15 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="task1.c">
+    <ClCompile Include="main5.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main1.c">
+    <ClCompile Include="task5.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="task1.h">
+    <ClInclude Include="task5.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
