@@ -3,10 +3,10 @@
 #include <stdlib.h>
 #include "task5.h"
 
-char password(char line)
+char * password(char * line)
 {
 	int i = 0;
-	for (i = 0; i < strlen(line); i++)
+	for (i = 0; i < 8; i++)
 	{
 		switch (rand() % 3)
 		{
@@ -18,6 +18,7 @@ char password(char line)
 			break;
 		case 2:
 			line[i] = rand() % ('0' - '9' + 1) + '0';
+			break;
 		}
 	}
 	return line;

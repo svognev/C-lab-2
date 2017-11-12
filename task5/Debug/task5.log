@@ -1,6 +1,4 @@
 ﻿  task5.c
-c:\labs\c-lab-2\task5\task5.c(7): error C2040: 'password': 'char (char)' differs in levels of indirection from 'char *(char *)'
-c:\labs\c-lab-2\task5\task5.c(9): warning C4013: 'strlen' undefined; assuming extern returning int
-c:\labs\c-lab-2\task5\task5.c(14): error C2109: subscript requires array or pointer type
-c:\labs\c-lab-2\task5\task5.c(17): error C2109: subscript requires array or pointer type
-c:\labs\c-lab-2\task5\task5.c(20): error C2109: subscript requires array or pointer type
+main5.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:LBR' specification
+  task5.vcxproj -> C:\labs\C-lab-2\Debug\task5.exe
+  task5.vcxproj -> C:\labs\C-lab-2\Debug\task5.pdb (Full PDB)
