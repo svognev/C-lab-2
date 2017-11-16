@@ -5,6 +5,7 @@
  *      Author: michael
  */
 #include <stdio.h>
+#include <stdlib.h>
 #include <time.h>
 #include "task4.h"
 

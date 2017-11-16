@@ -6,9 +6,7 @@
  */
 #include <stdio.h>
 #include <time.h>
-
-#include "../src/task1.h"
-ask1.h"
+#include "task1.h"
 
 
 int main(){

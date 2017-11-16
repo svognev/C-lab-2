@@ -5,6 +5,7 @@
  *      Author: michael
  */
 #include <time.h>
+#include <stdlib.h>
 
 char* password(char* line){
 	srand(clock());
