@@ -1,4 +1,4 @@
-﻿  main1.c
-c:\labs\c-lab-2\task1\main1.c(15): warning C4477: 'printf' : format string '%08.1f' requires an argument of type 'double', but variadic argument 2 has type 'int'
+﻿  task1.c
+c:\labs\c-lab-2\task1\task1.c(10): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
   task1.vcxproj -> C:\labs\C-lab-2\Debug\task1.exe
   task1.vcxproj -> C:\labs\C-lab-2\Debug\task1.pdb (Full PDB)

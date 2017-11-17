@@ -5,6 +5,7 @@
 
 float height(int currTime, int startHeight)
 {
-	startHeight = startHeight - (9.81 * (currTime * currTime) / 2);
-	return startHeight;
+	time_t sec = time(0);
+	while (time(0) <= sec);
+	return(startHeight - (9.81 * (currTime * currTime)) / 2);
 }

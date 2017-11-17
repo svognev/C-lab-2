@@ -10,10 +10,16 @@ int main() {
 	scanf("%d", &startHeight);
 	while (startHeight > 0)
 	{
-		currTime = clock() + 1000;
-		height(currTime, startHeight);
-		printf("t=%02d c h=%08.1f m\n", currTime, startHeight);
+		float currHeight = height(currTime, startHeight);
+		if (currHeight > 0)
+		{
+			printf("t=%02d c h=%06.1lf m\n", currTime, currHeight);
+			currTime++;
+		}
+		else
+			break;
+		
 	}
-	printf("BABAH!!!");
+	printf("BABAH!!!\n");
 	return 0;
 }
