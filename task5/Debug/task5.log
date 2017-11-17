@@ -1,4 +1,0 @@
-﻿  task5.c
-main5.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:LBR' specification
-  task5.vcxproj -> C:\labs\C-lab-2\Debug\task5.exe
-  task5.vcxproj -> C:\labs\C-lab-2\Debug\task5.pdb (Full PDB)

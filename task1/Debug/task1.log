@@ -1,4 +1,0 @@
-﻿  task1.c
-c:\labs\c-lab-2\task1\task1.c(10): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
-  task1.vcxproj -> C:\labs\C-lab-2\Debug\task1.exe
-  task1.vcxproj -> C:\labs\C-lab-2\Debug\task1.pdb (Full PDB)
