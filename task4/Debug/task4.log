@@ -1,1 +1,4 @@
-﻿
+﻿  main4.c
+c:\labs\c-lab-2\task4\main4.c(10): warning C4013: 'rand' undefined; assuming extern returning int
+  task4.vcxproj -> C:\labs\C-lab-2\Debug\task4.exe
+  task4.vcxproj -> C:\labs\C-lab-2\Debug\task4.pdb (Full PDB)
