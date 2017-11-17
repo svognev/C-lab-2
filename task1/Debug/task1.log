@@ -1,7 +1,4 @@
 ﻿  main1.c
-c:\labs\c-lab-2\task1\main1.c(8): warning C4013: 'print' undefined; assuming extern returning int
-c:\labs\c-lab-2\task1\main1.c(9): error C2198: 'scanf': too few arguments for call
-c:\labs\c-lab-2\task1\main1.c(10): warning C4013: 'heigh' undefined; assuming extern returning int
-c:\labs\c-lab-2\task1\main1.c(10): warning C4473: 'printf' : not enough arguments passed for format string
-  c:\labs\c-lab-2\task1\main1.c(10): note: placeholders and their parameters expect 2 variadic arguments, but 1 were provided
-  c:\labs\c-lab-2\task1\main1.c(10): note: the missing variadic argument 2 is required by format string '%08.1f'
+c:\labs\c-lab-2\task1\main1.c(15): warning C4477: 'printf' : format string '%08.1f' requires an argument of type 'double', but variadic argument 2 has type 'int'
+  task1.vcxproj -> C:\labs\C-lab-2\Debug\task1.exe
+  task1.vcxproj -> C:\labs\C-lab-2\Debug\task1.pdb (Full PDB)

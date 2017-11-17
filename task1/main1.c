@@ -4,9 +4,16 @@
 #include "task1.h"
 
 int main() {
-	float startHeight = 0;
-	print("Enter bomb's drop height");
-	scanf();
-	printf("t=%02d c h=%08.1f m", heigh(startHeight));
-
+	int startHeight = 0;
+	int currTime = 0;
+	printf("Enter bomb's drop height:\n");
+	scanf("%d", &startHeight);
+	while (startHeight > 0)
+	{
+		currTime = clock() + 1000;
+		height(currTime, startHeight);
+		printf("t=%02d c h=%08.1f m\n", currTime, startHeight);
+	}
+	printf("BABAH!!!");
+	return 0;
 }
