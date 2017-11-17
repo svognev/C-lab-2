@@ -10,24 +10,19 @@
 int main()
 {
 	char buf[SIZE] = {0};
-	char buf2[SIZE] = {' '};
 	int line;
 	int i;
+	int count;
 	printf("Enter a number of lines\n");
-	if (!scanf("%d", &line))
+	if (!scanf("%d", &count))
 	{
-		printf("Invalid input!");
+		printf("Invalid input!\n");
 		return 0;
 	}
 	
-	for (i = 0; i < SIZE; i++)
-		buf2[i] = ' ';
-	
-	for ( i = 1; i <= line; i++)
+	for ( i = 1; i <= count; i++)
 	{
-		buf2[line - i] = '\0';
-		printf("%s", buf2);
-		puts(layout(buf, i));
+		puts(layout(buf, i,count));
 	}
 	
 	return 0;

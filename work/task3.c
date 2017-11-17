@@ -1,13 +1,13 @@
 #include <stdio.h>
 
-char * layout(char buf[], int line)
+char * layout(char buf[], int line, int count)
 {
 	int i = 0;
-	int width = line + (line - 1);
-
-	for ( i = 0; i < width; i++)
-	{
+	for (; i < (count-line); i++)
+		buf[i] = ' ';
+	int width = line + (line - 1)+i;
+	for ( ; i < width; i++)
 		buf[i] = '*';
-	}
+	
 	return buf;
 }
