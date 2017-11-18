@@ -2,7 +2,6 @@
 #include<stdio.h>
 #include<time.h>
 #include "task1.h"
-
 int main()
 {
 	clock_t now;
