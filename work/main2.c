@@ -17,7 +17,7 @@ int main()
 	
 	while (turn(value, secret) != 0)
 	{
-		for (int i = 2; i < 100; i++)     // —четчик попыток
+		for (int i = 2; i < 100; i++)     // The counter of trying
 		{
 			if (turn(value, secret) == 1)
 			{
