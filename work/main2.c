@@ -15,20 +15,14 @@ int main()
 		scanf("%d", &value);
 		int result = (turn(value, secret));
 		if (result == 0) {
-			printf("You win! The number is %d!\n", secret);
+			printf("You win!\n");
 			return 0;
 		}
 		else if (result < 0) {
-			if (i > 1)
-				printf("No, the number is bigger than %d. You've got %d tries left. Try again:\n", value, i);
-			else if (i == 1)
-				printf("No, the number is bigger than %d. This is your last try:\n", value, i);
+			printf("The number is bigger\n");
 		}
 		else if (result > 0) {
-			if (i > 1)
-				printf("No, the number is less than %d. You've got %d tries left. Try again:\n", value, i);
-			else if (i == 1)
-				printf("No, the number is less than %d. This is your last try:\n", value, i);
+			printf("The number is less\n");
 		}
 		else
 		{
