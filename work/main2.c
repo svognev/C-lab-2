@@ -31,6 +31,6 @@ int main()
 		}
 		i--;
 	}
-	printf("Unfortunatelly you're out of tries...\n", secret);
+	printf("Unfortunatelly you're out of tries...\n");
 	return 0;
 }
