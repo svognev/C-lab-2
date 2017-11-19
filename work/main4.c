@@ -1,10 +1,12 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
+#include <time.h>
 #include "task4.h"
 
 int main()
 {
 	char line[512] = { '0' };
+	srand(time(0));
 	for (int i = 0; i < 64; i++)
 	{
 		switch (rand() % 3)
