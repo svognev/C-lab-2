@@ -4,17 +4,14 @@
 
 int main()
 {
-	int linesTotal = 0;
+	int count = 0;
 	char buf[512] = { '0' };
 	printf("Enter number of lines: ");
-	scanf("%d", &linesTotal);
-	for (int line = 1; line <= linesTotal; line++)
+	scanf("%d", &count);
+	
+	for (int line = 1; line <= count; line++)
 	{
-		for (int i = 0; i < (2 * linesTotal - 1); i++)
-		{
-			buf[i] = '*';
-		}
-		printf("%s\n", layout(buf,line));
+		printf("%s\n", layout(buf, line, count));
 	}
 	return 0;
 }

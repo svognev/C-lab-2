@@ -3,14 +3,22 @@
 #include <string.h>
 #include "task3.h"
 
-char * layout(char buf[], int line)
+char * layout(char buf[], int line, int count)
 {
 	int stars = 2 * line - 1;
-	int spaces = (strlen(buf) - stars) / 2;
-	for (int i = 0; i < spaces; i++)
+	int starsMax = 2 * count - 1;
+	int spaces = (starsMax - stars) / 2;
+	int i = 0;
+	for (i = 0; i < spaces; i++)
 	{
 		buf[i] = ' ';
 	}
-	buf[strlen(buf) - spaces] = '\0';
+	while (stars)
+	{
+		buf[i] = '*';
+		stars--;
+		i++;
+	}
+	buf[i+1] = '\0';
 	return buf;
 }
