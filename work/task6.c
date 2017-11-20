@@ -19,7 +19,7 @@ char * clear(char * line)
 	{
 		if (line[i] == ' ')
 		{
-			for (int j = i + 1; j < strlen(line); j++)
+			for (int j = i + 1; j <= strlen(line); j++)
 			{
 				if (line[j] != ' ')
 				{
