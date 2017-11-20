@@ -10,7 +10,6 @@
 int main()
 {
 	char buf[SIZE] = {0};
-	int line;
 	int i;
 	int count;
 	printf("Enter a number of lines\n");
