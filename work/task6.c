@@ -5,7 +5,7 @@
 
 void moveArray(char line[], int i, int j)
 {
-	while (j < strlen(line))
+	while (j <= strlen(line))
 	{
 		line[i] = line[j];
 		i++;
