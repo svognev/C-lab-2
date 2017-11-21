@@ -8,7 +8,7 @@
 
 int main()
 {
-	char line[SIZE] = { 0 };
+	char line[SIZE]; //= { 0 };
 	printf("Enter a string:\n");
 	fgets(line, SIZE, stdin);
 	puts(clear(line));
