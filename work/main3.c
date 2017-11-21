@@ -9,8 +9,8 @@ int main()
 	
 	printf("Enter amount of lines: \n");
 	scanf("%d", &count);
-	
-	for (line = 0; line < count; line++)
+		
+	for (line = 1; line <= count; line++)
 	{
 		layout(buf, line, count);
 		putchar('\n');

@@ -8,10 +8,11 @@ int main()
 	char line[1000];
 
 	printf("Enter string with extra gaps:\n");
-	fgets(line, 1000, stdin);	
+	fgets(line, 1000, stdin);
+	line[strlen(line) - 1] = '\0';
 
 	printf("Your string after cleaning:\n");
-	printf(clear(line));
+	printf("%s\n", clear(line));	
 	
 	return 0;
 }

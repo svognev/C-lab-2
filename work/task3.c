@@ -3,12 +3,12 @@
 
 char* layout(char buf[], int line, int count)
 {
-	int j;
-	for (j = 1; j < count - line; j++)
+	int i, j;
+	for (i = 0; i < count - line; i++)
 	{
 		putchar(' ');			
 	}
-	for (j = 1; j <= 2 * line + 1; j++)
+	for (j = 0; j < 2 * line - 1; j++)
 	{
 		putchar('*');					
 	}				
