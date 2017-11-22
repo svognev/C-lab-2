@@ -2,7 +2,7 @@
 #define SIZE 300
 #include<stdio.h>
 #include<string.h>
-
+#include "task6.h"
 int main()
 {
 	int short i=0;
