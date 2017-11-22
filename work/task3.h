@@ -1,1 +1,1 @@
-char * layout(char buf[], int line);
+char * layout(char buf[], int line,int count);
