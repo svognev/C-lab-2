@@ -1,15 +1,43 @@
 #define _CRT_SECURE_NO_WARNINGS
-#define _CRT_N0_WINDOWS
 #include<stdio.h>
 #include<stdlib.h>
-#define SIZE 50
+//#define SIZE 100
 
-char * layout(char buf[], int line)
+char * layout(char buf[], int line, int count)
 {
-	int i = 0;
-	for (i = 0; i<=line;i++)// 
+	int i;
+	int weightGap,weihgtStar;
+	weightGap = count-line;
+	weihgtStar = line + line - 1;
+	 i = 0;
+	for (i;i<weightGap;i++)
 	{
-		buf[i] = '*';// insert * where line is length its
+		buf[i] = ' ';
+	}
+	for (; i <(weightGap + weihgtStar);i++)
+	{
+		
+		buf[i] = '*';
 	}
 	return buf;
 }
+
+
+
+/*Задача №3
+
+Треугольник должен выглядеть так:
+
+*
+***
+*****
+Количество строк задаётся пользователем с клавиатуры.
+
+Состав
+
+Программа должна состоять из двух функций:
+
+char * layout(char buf[],int line,int count) - формирование одной строки треугольника (line - порядковый номер строки с вершины треугольника, начальное значение 1,
+count - общее количество строк).
+При этом часть строки заполнена пробелами (впереди), а часть символами "звездочка".
+main*/

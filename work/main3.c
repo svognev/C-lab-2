@@ -2,28 +2,16 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include"task3.h"
-#define SIZE 200
-int main()
-{
-	int i, line = 0, weight = 0, height;
-	int weightGap;
-	char buf[SIZE] = { " " };
-	char gap[] = { " " };
-	printf("enter the height of the triangle  :");
-	scanf("%i", &height);
-	weight=height+height-1;// weigt the triangle egual two height minus one
-	weightGap=height;// max gap equal height
-
-		for (line=0;line<weight;line=line+2)
+#define SIZE 100
+	int main()
+	{
+		int line = 1, count=0;
+		char buf[SIZE] = {" "};
+		printf("Enter numeros line : ");
+		scanf(" %i", &count);
+		for (line = 1;line <= count;line++)
 		{
-			weightGap --;
-				for (i=weightGap;i>0 ;i--)// ferst gap equal height minus one
-				{
-					printf("%s", gap);
-				}
-			printf("%s", layout(buf, line));
-			printf("\n");
+			printf("%s\n", layout(buf, line,count));
 		}
-
-	return 0;
-}
+		return 0;
+	}	
