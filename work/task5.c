@@ -3,32 +3,40 @@
 #include<stdlib.h>
 #include<stdio.h>
 #include<time.h>
-char * password(char line)
+char * password(char *line)
 {
 	clock_t now;
-	int i;
+	int i=0,small=0,digit=0,capital=0;
 	char buf[BUF+1] = {" "};
-	char *result;
+	char result[BUF+1];
 	now = clock();// current time
 	while (clock() < (now + CLOCKS_PER_SEC))
 	srand(time(0));
-	for (i = 0;i < line;i++)
+	while (i>=0)
 	{
-		switch (rand() % 3)
+		for (i = 0;i < BUF;i++)
 		{
-		case 0:
-			buf[i] = rand() % ('z' - 'a' + 1) + 'a';// random small letter
-			break;
-		case 1:
-			buf[i]= rand() % ('Z' - 'A' + 1) + 'A';// random capital letter
-			break;
-		case 2:
-			buf[i] = rand() % ('0' - '9' + 1) + '1';// random number
-			break;
+			switch (rand() % 3)
+			{
+			case 0:
+				line[i] = rand() % ('z' - 'a' + 1) + 'a';// random small letter
+				small++;
+				break;
+			case 1:
+				line[i] = rand() % ('Z' - 'A' + 1) + 'A';// random capital letter
+				capital++;
+				break;
+			case 2:
+				line[i] = rand() % ('0' - '9' + 1) + '1';// random number
+				digit++;
+					break;
+			}
 		}
-	}
-	buf[(line)] = '\0';//chenge last symbol on en of string
-result = malloc(sizeof(char) * 8);// 
-		sprintf(result, "%s", buf);
-	return result;
+		line[i] = '\0';//chenge last symbol on en of string
+		
+		if (small>0&&capital>0&&digit>0)
+			break;
+	}					  
+	sprintf(result, "%s", buf);
+	return line;
 }

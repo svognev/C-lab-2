@@ -1,1 +1,1 @@
-char * password(char line);
+char * password(char *line);
