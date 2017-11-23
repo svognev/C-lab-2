@@ -9,7 +9,7 @@
 int main()
 {
 	char buf[STR];
-	int count[CH] = { 0 };
+	int count[CH] = { '\0' };
 	int len;
 
 	printf("Enter string \n");
