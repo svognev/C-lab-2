@@ -2,25 +2,23 @@
 #include<stdio.h>
 #include<time.h>
 
-#define N 100
+#define STR 100
+#define CH 123
 
 int main()
 {
-	int i, j, k;
-	char buf[N];
-	int count[26] = { 0 };
-	
-	srand(time(0));
+	char buf[STR];
+	int count[CH] = { 0 };
 
 	printf("Enter string \n");
-	gets(buf);
+	fgets(buf, STR, stdin);
 
-	for (j = 0; buf[j]; j++)
-		count[buf[j] - 'a']++;
+	for (int i = 0; buf[i]; i++)
+		count[buf[i]-' ']++;
 
-	for (j = 0; j < 26; j++)
+	for (int j = 0; j < CH; j++)
 		if (count[j] > 0)
-			printf("%c - %d\n", j + 'a', count[j]);
+			printf("%c - %d\n", j+' ', count[j]);
 
 	return 0;
 }
