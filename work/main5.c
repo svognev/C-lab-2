@@ -1,5 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
 #include "task5.h"
 #define PASS_NUM 10
 #define PASS_LEN 8

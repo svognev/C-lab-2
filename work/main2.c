@@ -1,6 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <time.h>
+#include <stdlib.h>
 #include "task2.h"
 #define MAX_ATT_NUM 7
 

@@ -1,4 +1,5 @@
 #include <string.h>
+#include <stdlib.h>
 
 char* password(char* line)
 {
@@ -18,7 +19,7 @@ char* password(char* line)
 			line[i] = 'a' + rand() % ('z' - 'a' + 1);
 			break;
 		default:
-			puts("Error 1");
+			line[i] = '0';
 			break;
 		}
 	}
