@@ -9,13 +9,15 @@ char* layout(char buf[], int line, int count)
 	for (i = spNum; i < (spNum + astNum); i++)
 		buf[i] = '*';
 
-	if (line < count)
-	{
-		buf[i++] = '\n';
-		buf[i] = '\0';
-	}
-	else
-		buf[i] = '\0';
+	buf[i] = '\0';
+
+	//if (line < count)
+	//{
+	//	buf[i++] = '\n';
+	//	buf[i] = '\0';
+	//}
+	//else
+	//	buf[i] = '\0';
 
 	return buf;
 }
