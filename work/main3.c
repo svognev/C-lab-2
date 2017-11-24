@@ -5,15 +5,14 @@
 int main() 
 {
 	int count, line; 
-	char buf[50];
+	char buf[100] = {' '};
 	
 	printf("Enter amount of lines: \n");
 	scanf("%d", &count);
 		
 	for (line = 1; line <= count; line++)
 	{
-		layout(buf, line, count);
-		putchar('\n');
+		printf("%s\n", layout(buf, line, count));
 	}
 	return 0;
 }
