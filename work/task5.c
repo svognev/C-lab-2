@@ -8,7 +8,6 @@
 
 char * password(char *line)
 {
-	srand(time(0));
 	char ch;
 
 	for (int i = 0; i < N-1; i++)
