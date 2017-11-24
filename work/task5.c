@@ -8,6 +8,9 @@
 
 char * password(char *line)
 {
+	srand(time(0));
+	clock_t now;
+
 	char ch;
 
 	for (int i = 0; i < N-1; i++)
@@ -21,6 +24,12 @@ char * password(char *line)
 		}
 	}
 	line[N - 1] = '\0';
+
+	now = clock();
+	while (clock() <= now + CLOCKS_PER_SEC) 
+	{
+
+	}
 
 	return line;
 }
