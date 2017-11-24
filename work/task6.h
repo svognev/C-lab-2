@@ -1,1 +1,1 @@
-char *clear(char *line);
+char * clear(char *line);

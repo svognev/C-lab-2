@@ -15,14 +15,14 @@ char* process(char* line)
 			if (beginLeft > endRight)// check of the meet the left and the right of the counter 
 				break;
 			left = line[beginLeft];
-		} while ( ( 'A'-1) < left && left < (1+'Z'));// check if symbol is capital letter
+		} while ( left>='A' && left <='Z'|| left >= 'a' && left <= 'z');// check if symbol is capital letter
 
 		do {
 			endRight--;
 			if (beginLeft > endRight)//// check of the meet the left and the right of the counter 
 				break;
 			right = line[(endRight)];
-		} while (('0'-1) < right && right < ('9'+1));//check if symbol is number
+		} while (right >='0'&& right <='9');//check if symbol is number
 		if (beginLeft < endRight)//check if right counter > left counter then:
 		{
 			line[beginLeft] = right;//if condition is true then left number chenge on right sidecletter

@@ -6,7 +6,7 @@
 	int main()
 	{
 		int line = 1, count=0;
-		char buf[SIZE] = {" "};
+		char buf[SIZE] = {'0'};
 		printf("Enter numeros line : ");
 		scanf(" %i", &count);
 		for (line = 1;line <= count;line++)

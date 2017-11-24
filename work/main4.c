@@ -10,15 +10,19 @@ int main()
 	char line[SIZE] = { ' ' };
 	char left = ' ', right = ' ';
 	srand(time(0));// random of curent time
-	for (i = 0;i < SIZE - 1;i++)
+	for (i = 0;i < (SIZE - 1);i++)
 	{
-		switch (rand() % 2)
+		switch (rand() % 3)
 		{
 		case 0:
-			line[i] = rand() % ('Z' - 'A' + 1) + 'A';//random letter
+			line[i] = rand() % ('Z' - 'A' + 1) + 'A';//random capital letter
 			break;
+		
 		case 1:
 			line[i] = rand() % ('0' - '9' + 1) + '0';//random number
+			break;
+		case 2:
+			line[i] = rand() % ('z' - 'a' + 1) + 'a';//random small letter
 			break;
 		}
 	}
