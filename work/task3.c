@@ -4,22 +4,18 @@
  *  Created on: 14 нояб. 2017 г.
  *      Author: michael
  */
-#include <string.h>
-#include <stdio.h>
 
-char* layout(char* buf,int line){
-	int l = strlen(buf);
-	int step;
-	if (line == 1)
-		step = 1;
-	else
-		step = line*2 - 1;
-
-	l -= 1;
-	while (step > 0){
-		buf[l] = '*';
-		l-=2;
-		step--;
+char* layout(char buf[],int line, int count){
+	int stars = line*2 - 1;
+	int spaces = count - line;
+	int i = 0;
+	for (; i < spaces; i++){
+		buf[i] = ' ';
 	}
+	for (; i < stars+spaces; i++){
+		buf[i] = '*';
+	}
+	buf[i] = '\0';
+
 	return buf;
 }

@@ -12,4 +12,4 @@
 
 #endif /* TASK3_H_ */
 
-char* layout(char* buf,int line);
+char* layout(char buf[],int line, int count);

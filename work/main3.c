@@ -5,26 +5,20 @@
  *      Author: michael
  */
 #include <stdio.h>
-#include <malloc.h>
-#include <string.h>
 #include "task3.h"
 
 int main(){
-	char* str;
+	char str[32];
 	int lines;
 	int count;
 
 	printf("Enter string count: ");
 	scanf("%d", &lines);
+	count = lines;
 
-	for (int i = 0; i < lines; i++){
-		count = (lines*2)+(2*i);
-		str = (char*) malloc(count*sizeof(char));
-		for (int i=0; i < count;i++){
-			str[i] = ' ';
-		}
-		str[count-1] = '\0';
-		printf("%s\n", layout(str,i+1));
+	for (int i = 1; i <= lines; i++){
+		//printf("%s\n",str);
+		printf("%s\n", layout(str,i,count));
 	}
 
 	return 0;
