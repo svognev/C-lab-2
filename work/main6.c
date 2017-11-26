@@ -5,6 +5,7 @@
  *      Author: michael
  */
 #include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 #include "task6.h"
 
