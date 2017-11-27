@@ -3,6 +3,7 @@
 #include<stdlib.h>
 #include<ctype.h>
 #include<string.h>
+#include<limits.h>
 #include<time.h>
 
 #define N 20
@@ -15,22 +16,23 @@ char* process(char* line)
 
 	len_buf = strlen(line);
 	
+
 	for (int i = 0; i < len_buf; i++)
 	{
-		if ((line[i] >= 'a' && line[i] <= 'z') || (line[i] >= 'A' && line[i] <= 'Z'))
+		if (!isdigit((unsigned char)line[i]))
 		{
 			for (int j = 0; j < i; j++)
 			{
-				if (line[i] >= '0' && line[i] <= '9')
+				if (isdigit ((unsigned char) line[j]))
 				{
 					ch = line[j];
 					line[j] = line[i];
 					line[i] = ch;
+					break;
 				}
 			}
 		}
 	}
-	line[len_buf] = '\0';
-
+	
 	return line;
 }
