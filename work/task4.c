@@ -7,6 +7,7 @@
 
 #define N 20
 
+
 char* process(char* line)
 {
 	char ch;
@@ -16,13 +17,12 @@ char* process(char* line)
 	
 	for (int i = 0; i < len_buf; i++)
 	{
-		if (!isdigit((unsigned char)line[i]))
+		if ((line[i] >= 'a' && line[i] <= 'z') || (line[i] >= 'A' && line[i] <= 'Z'))
 		{
 			for (int j = 0; j < i; j++)
 			{
-				if (isdigit((unsigned char)line[j]))
+				if (line[i] >= '0' && line[i] <= '9')
 				{
-					ch = '\0';
 					ch = line[j];
 					line[j] = line[i];
 					line[i] = ch;
