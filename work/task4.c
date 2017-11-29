@@ -6,7 +6,7 @@
 #include<limits.h>
 #include<time.h>
 
-#define N 20
+#define N 10
 
 char* process(char* line)
 {
