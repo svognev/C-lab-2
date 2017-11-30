@@ -1,27 +1,27 @@
 #include "task6.h"
 char *clear(char *line)
 {
-	int position = 0; // позиция в массиве
-	int end = 0; // номер последнего не '\0'-го символа
-	int temp = 0; // переменная для удаления двойных пробелов
+	int position = 0; 
+	int end = 0; 
+	int temp = 0; 
 
-	for ( ; line[position] != '\0'; position++, end++); // определяем размер строки, можно заменить strlen(line)
-	--end; // смещаемся с символа '\0'
+	for ( ; line[position] != '\0'; position++, end++); 
+	--end; 
 	
 
-	if (line[end] == '\n') // если последний символ '\n'
+	if (line[end] == '\n') 
 	{
-		line[end] = '\0'; // заменяем '\n' на '\0'
+		line[end] = '\0'; 
 		if (end > 0)
-		--end; // смещаемся с символа '\0'
+		--end; 
 	}
 
-	for ( ; (line[end] == ' ') && (end > 0); end--) // убираем пробелы в конце строки
+	for ( ; (line[end] == ' ') && (end > 0); end--) 
 		line[end] = '\0';
 
-	for (position = 0; line[position] == ' '; ) // убираем пробелы в начале строки
+	for (position = 0; line[position] == ' '; ) 
 	{
-		for (position = 0; (position < end) && (line[position] != '\0'); position++) // как вариант условия вместо (i < end) можно (line[i] != '\0')
+		for (position = 0; (position < end) && (line[position] != '\0'); position++) 
 			line[position] = line[position + 1];
 
 		line[end] = '\0';
@@ -34,13 +34,13 @@ char *clear(char *line)
 	}
 
 
-	while ((position < end) && (line[position] != '\0')) // убираем двойные пробелы
+	while ((position < end) && (line[position] != '\0')) 
 	{
 		for (temp = position; line[position] != ' '; position++, temp++);
 
 			if ((line[position] == ' ') && (line[position + 1] == ' '))
 			{
-				for ( ; (temp < end); temp++) // используем temp что бы не двигать position
+				for ( ; (temp < end); temp++) 
 					line[temp] = line[temp + 1];
 
 				line[end] = '\0';

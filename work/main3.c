@@ -4,14 +4,15 @@
 
 int main()
 {
-	int line = 1; // line - порядковый номер строки с вершины треугольника
-	int count = 0; // count - общее количество строк.
-	printf("Enter the number of rows (Min 2, Max %d): ", N/2);
-	if ((scanf("%d", &count) == 1) && (count >= 2) && (count <= N/2))
+	int line = 1;
+	int count = 0;
+	int halfsize = SIZE/2;
+	printf("Enter the number of rows (Min 2, Max %d): ", halfsize);
+	if ((scanf("%d", &count) == 1) && (count >= 2) && (count <= halfsize))
 	{
 		while (line <= count)
 		{
-			char buf[N] = { 0 };
+			char buf[SIZE] = { 0 };
 			printf("%s\n", layout(buf, line, count));
 			line++;
 		}

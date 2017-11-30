@@ -1,3 +1,3 @@
 #pragma once
-#define N 56
+#define SIZE 56
 char *layout(char buf[], int line, int count);

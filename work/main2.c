@@ -5,17 +5,17 @@
 
 int main()
 {
-	int value = 0;  // value - число введённое пользователём.
-	int secret = 0; // secret - загаданное число.
-	srand(time(0)); // получение уникального зерна для ранда при помощи времени.
-	secret = rand()%100+1;  // генерация значения для переменной secret.
+	int value = 0;
+	int secret = 0;
+	srand(time(0));
+	secret = rand()%100+1;
 	printf("Enter a number from 1 to 100: ");
 
 	while (1)
 
 	{
 
-		if (scanf("%d", &value) == 1) // проверка формата введённых данных.
+		if (scanf("%d", &value) == 1)
 		{
 			if ((value <= 0) || (value > 100))
 			{
@@ -41,7 +41,7 @@ int main()
 
 		else
 		{
-			for (int buffer = getchar(); buffer != '\n' && buffer != EOF; buffer = getchar()); // очистка буфера ввода для scanf !!!
+			for (int buffer = getchar(); buffer != '\n' && buffer != EOF; buffer = getchar());
 			printf("Uncorrect data.\nTry again: ");
 			continue;
 		}

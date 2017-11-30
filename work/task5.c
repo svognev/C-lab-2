@@ -4,12 +4,12 @@
 
 char *password(char *line)
 {
-	int letter = 0; // номер символа в пароле.
-	int sort = 0; // вид символа.
+	int letter = 0; 
+	int sort = 0; 
 
 			for (letter = 0; letter < (LENGTH); letter++)
 			{
-				sort = rand() % (3 - 1 + 1) + 1; // 3 варианта
+				sort = rand() % (3 - 1 + 1) + 1;
 
 				if (sort == 1)
 					line[letter] = (rand() % ('Z' - 'A' + 1) + 'A');

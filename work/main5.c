@@ -7,8 +7,8 @@
 int main()
 {
 	
-	int word = 0; // количество паролей.
-	char line[LENGTH + 1] = { 0 }; // строка для записи пароля.
+	int word = 0;
+	char line[LENGTH + 1] = { 0 };
 
 	printf("%d passwords with %d characters are generated.\n", QUANTITY, LENGTH);
 	srand(time(0));

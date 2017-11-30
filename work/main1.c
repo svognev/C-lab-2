@@ -5,9 +5,9 @@
 
 int main()
 {	
-	int currTime = 0;  // currTime - текущий момент времени.
-	int startHeight = 0; // startHeight - стартовая высота.
-	time_t now = 0; // now - переменная для функции clock(), для вывода результатов раз в секунду.
+	int currTime = 0;
+	int startHeight = 0;
+	time_t now = 0;
 	printf("Enter the height with which the bomb falls (in meters): ");
 	if ((scanf("%d", &startHeight) == 1) && (startHeight > 0))
 	{
@@ -16,7 +16,7 @@ int main()
 				printf("t=%02d c h=%06.1f m\n", currTime, height(currTime, startHeight));
 				currTime++;
 
-				now = clock();  /* Эта и следующия строка для вывода результатов раз в секунду */
+				now = clock();
 				while ((clock() <= now + CLOCKS_PER_SEC));          
 			}
 		printf("BABAH!!!\n\a");
