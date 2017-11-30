@@ -6,19 +6,21 @@ char * layout(char buf[], int line, int h)
 	char *str_buf;
 	int rez_space;
 	int rez_star;
+	int i = 0;
 
 	rez_space =h-line;
 	rez_star = 2 * line - 1;
 	
-	for (int i = 0; i <rez_space; i++)
+	for (i; i <rez_space; i++)
 	{
 		buf[i] = space;
 	}
-	
-	for (int i = 0; i <rez_star; i++)
+
+	for (i; i <(rez_star+rez_space); i++)
 	{
-		buf[i+rez_space] = star;
+		buf[i] = star;
 	}
+	buf[i+1] = '\0';
 	
 	return buf;
 }
