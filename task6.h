@@ -1,6 +1,0 @@
-
-char* clear(char*line);
-
-
-
-            
