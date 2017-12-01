@@ -17,7 +17,7 @@ int main()
    
     char str[SIZE];
     char line[SIZE];
-    //char clear(char line);
+   
     
     printf("Enter a string: \n");
     fgets (str, sizeof(str), stdin);
