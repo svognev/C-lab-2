@@ -19,13 +19,7 @@ int main(void)
     char line[size];
   
  char *x = "123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";//line of numbers and letters
- //   char *x=rand()%(62);
-    
- /*   strcpy (line, x);
-    line[ strlen ( x ) ] = '\0';
-    first_one = &line;
-    last_one = &line[strlen(x) - 1];
-    */
+
     
     printf ( "Initial string: %s\n", x );
     printf ( "New string:  %s\n", process(line) );
