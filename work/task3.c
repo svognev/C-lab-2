@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-
 char* layout(char buf[], int line, int count)
 {
 	int space, star;
@@ -9,6 +8,7 @@ char* layout(char buf[], int line, int count)
 			 buf[space] = ' ';
 		for (star = (count - line); star < (count + line - 1); star++)
 			 buf[star] = '*';
+		buf[star+1] = '\0';
 	
 	return buf;
 }

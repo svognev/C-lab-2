@@ -6,7 +6,6 @@ char* process(char* line)
 	int left = 0, right = strlen(line) - 1;
 
 	for (left = 0; left < strlen(line); left++)
-	{
 		if (line[left] >= '0' && line[left] <= '9')
 		{
 			for (right = strlen(line) - 1; right > left; right--)
@@ -21,5 +20,4 @@ char* process(char* line)
 			}
 		}
 		return line;
-	}
 }
