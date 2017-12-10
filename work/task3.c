@@ -1,5 +1,7 @@
 char *layout(char buf[], int line, int count)
 {
+
+
 	int i = 0;
 
 	for ( ; i < (count - line); i++)
@@ -8,7 +10,7 @@ char *layout(char buf[], int line, int count)
 	for ( ; i < (count + line - 1); ++i)
 		buf[i] = '*';
 
-	if (i >= (count + line))
+	if (i == (count + line) - 1)
 		buf[i] = '\0';
 		
 	return buf;
