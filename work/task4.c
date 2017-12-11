@@ -14,32 +14,37 @@
 
 char* process(char* line)
 {
-    char *first_one, *last_one;
+    char *first, *last;
     char *x = "123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
     
-  //  strncmp(line, x,2);
-   strcpy (line, x);
+  strcpy (line, x);
     line[ strlen (x) ] = '\0';
-    first_one = line;
-    last_one = &line[strlen(x) - 1];
+    first = line;
+    last = &line[strlen(x) - 1];
     
-    while ( first_one != last_one )
+   
+    while ( *first != *last )
     {
-        for (x="0";x<="9";x++)
-            
-        {
-            if ( isdigit( *first_one ) )
+   
+          while( isdigit( *first ) )
             {
-                char t = *first_one;
-                *first_one = *last_one;
-                *last_one = t;
-                --last_one;
-            }
-            else
-                ++first_one;
-        }
+                char t = *first;
+                *first = *last;
+                *last = t;
+                --last;
+            
+                while(isalpha(*last))
+                {
+                    char t=*last;
+                    *last=*first;
+                    *first=t;
+                    ++first;
+                }
+           }
+      break;
+        
     }
+   
     return line;
     
 }
-
