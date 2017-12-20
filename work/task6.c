@@ -5,8 +5,9 @@ char * clear(char * line)
 	int i = 0;
 	int	j = 0;
 	int len = strlen(line);
-	
-	for (i=0;i<len;i++)
+	int nach = 0;
+
+	for (i=0,j=0;i<len;i++)//dvojnie probeli
 	{
 		if ((line[i] == ' ') && (line[i + 1] == ' '))
 		{
@@ -20,5 +21,17 @@ char * clear(char * line)
 		}
 		
 	}
+	
+	while (line[0] == ' ')//probeli v nachale
+	{
+		nach = 0;
+		while (line[nach] != '\0')
+		{
+			line[nach] = line[nach + 1];
+			nach++;
+		}
+	}
+	if (line[strlen(line) - 1] == ' ')//probel v konce
+		line[strlen(line) - 1] = '\0';
 	return line;
 }
