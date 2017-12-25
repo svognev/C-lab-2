@@ -1,31 +1,37 @@
-//
-//  task6.c
-//  lab_2_
-//
-//  Created by Ksenia on 20.11.2017.
-//  Copyright © 2017 Ksenia. All rights reserved.
-//
-
-
-#include <string.h>
 #include <stdio.h>
+#include <string.h>
+#include <ctype.h>
 #include "task6.h"
+#define SIZE 200
 
 
-
-char* clear(char* line)
+char * clear(char * line)
 {
-        int j = 0, space = 0;
-        
-        for (int i=0; line[i]; ++i) {
-            space = (line[i] == ' ') ? space + 1 : 0;
-            if (space < 2) {
-                line[j++] = line[i];
-            }
+    
+    int i=0, j = 0;
+    
+    
+    
+    for(i=0; i<strlen(line);i++)
+    {
+        if(line[i]==' ')
+        {
+            if(j==0)
+                continue;
+            if(line[i+1]==' ')
+                continue;
         }
-        line[j] = 0;
-        
-        return line;
+        line[j]=line[i];
+        j++;
     }
     
- 
+    if(line[j-1]==' ')
+        j--;
+    line[j]='\0';
+    
+    printf("\nNew string: %s", line);
+    return 0;
+    
+    
+}
+
