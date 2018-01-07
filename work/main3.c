@@ -1,26 +1,22 @@
-//
-//  main.c
-//  lab2_3_2
-//
-//  Created by Ksenia on 22.11.2017.
-//  Copyright © 2017 Ksenia. All rights reserved.
-//
-
-#include <stdio.h>
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h> 
 #include "task3.h"
 
 
+ int main()
+ {
+	 int count = 0;
+	 int line=1;
+		 char buf[200] = { 0 };
+	
+		    printf("Input count of lines: \n");
+      scanf("%d", &count);
+	
+	  for (line; line <= count; line++)
+		  printf("%s\n", layout(buf, line, count));
 
-int main()
-{
-    int count, line;
-    char buf[1000];
-    
-   printf("Input count of lines: \n");
-   scanf("%d", &count);
 
-    layout(buf, line, count);
-  
-    return 0;
-}
 
+	//  printf("\n");
+	     return 0;
+ }

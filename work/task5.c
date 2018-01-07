@@ -6,9 +6,9 @@
 //  Copyright © 2017 Ksenia. All rights reserved.
 //
 #include <stdio.h>
- #include "task5.h"
 #include <time.h>
 #include<stdlib.h>
+#include "task5.h"
 #define SIZE 512
 
 char* password(char* line)

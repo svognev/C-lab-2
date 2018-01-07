@@ -12,7 +12,7 @@ int main()
     printf("Enter a string: \n");
     fgets (line, SIZE, stdin);
     
-    clear(line);
+    printf("Cleared string: %s\n", clear(line));
     return 0;
 }
 

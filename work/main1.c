@@ -1,28 +1,38 @@
-//
-//  main.c
-//  lab2_1
-//
-//  Created by Ksenia on 19.11.2017.
-//  Copyright © 2017 Ksenia. All rights reserved.
-//
-
-#include <stdio.h>
-#include <time.h>
-
-#include "task1.h"
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h> 
+ #include <time.h>
+ #include "task1.h"
 
 
 int main()
 {
-    int startHeight;
-    int currTime;
-    currTime=0;
+	clock_t now;
+	     int startHeight;
+	     int currTime=0;
+		 printf("Input height above the ground (m): ");
+	     scanf("%d", &startHeight);
 
-    printf("Input height above the ground (m): ");
-    scanf("%d",&startHeight);
-    
-     height(currTime, startHeight);
-    
-    return 0;
-}
+		 while (1)
+		 {
 
+			 if (height(currTime,startHeight) > 0)
+			 {
+				 printf("\nt=%02d c h=%0.1f m", currTime, height(currTime, startHeight));
+				 //   sleep(1);
+				 currTime++;
+				 now = clock();
+				 while (clock() < now + 500);
+			
+			 }
+
+			 if (height(currTime,startHeight) < 0)
+			 {
+				 printf("\nGO OFF!!!\n");
+				 return 0;
+			 }
+		 }
+
+		 
+	
+		     return 0;
+	 }

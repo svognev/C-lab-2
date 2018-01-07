@@ -29,8 +29,8 @@ char * clear(char * line)
         j--;
     line[j]='\0';
     
-    printf("\nNew string: %s", line);
-    return 0;
+   // printf("\nNew string: %s", line);
+    return line;
     
     
 }
