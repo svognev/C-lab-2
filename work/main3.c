@@ -1,5 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include "task3.h"
+#include <string.h>
 #include <stdio.h>
 #define SIZE 512
 
@@ -15,7 +16,8 @@ int main()
 			printf("You entered an incorrect value\n");
 			if (ferror(stdin) || feof(stdin))
 			{
-				clearerr(stdin);				
+				clearerr(stdin);
+				
 			}
 			else
 				rewind(stdin);
@@ -28,9 +30,11 @@ int main()
 	for (int i = 1; i <= count; i++)
 	{
 		layout(buf, i, count);
-		for (int j = 0; j <= (count + i - 2); j++)
+		buf[strlen(buf)] = 0;
+		for (int j = 0; j <= (count + i); j++)
 		{
 			putchar(buf[j]);
+			//printf('%s', buf);
 		}
 		printf("\n");
 	}
