@@ -1,0 +1,5 @@
+char * clear(char * line);
+
+
+
+            
